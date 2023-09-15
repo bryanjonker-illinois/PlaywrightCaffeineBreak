@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@axe-core/playwright": "*",
+    "@axe-core/playwright": "^4.7.3",
     "@playwright/test": "^1.38.0",
     "@types/node": "^20.6.0"
   },
