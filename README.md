@@ -1,6 +1,6 @@
 # Playwright Caffeine Break
 
-This is a repository that has some examples of Playwright. This is for the 9/15/2023 Caffeine Break for University of Illinois, Champaign-Urbana. 
+This is a repository that has some examples of Playwright. This is for the 9/15/2023 Caffeine Break for University of Illinois, Champaign-Urbana. You can access this at https://go.illinois.edu/PlaywrightCaffeineBreak. 
 
 The slide deck is in the /slides folder. [The first slide is the title](./slides/title.md).
 
