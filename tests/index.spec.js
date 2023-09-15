@@ -2,22 +2,20 @@
 const { test, expect } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 
+// pulled from example -- not categorized
 test('Check Index Heading', async ({ page }) => {
   await page.goto('./index.html');
-
-  // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Playwright and Caffeine Break' })).toBeVisible();
 });
 
+// pulled from example -- not categorized, shows how to navigate through items
 test('Navigate through other pages', async ({ page }) => {
   await page.goto('./index.html');
-
   await page.getByRole('link', { name: 'See details' }).click();
-
   await expect(page.getByRole('heading', { name: 'Some details about Playwright' })).toBeVisible();
 });
 
-
+// how to create screenshots with playwright
 test.describe('screenshots', () => {
   test('index hero area', async ({ page }) => {
     await page.goto('./index.html');
@@ -31,8 +29,8 @@ test.describe('screenshots', () => {
   });
 })
 
+// testing the 'beforeEach', pretending that you have to go through the index.html page
 test.describe('test beforeEach', () => {
-  
   test.beforeEach(async ({ page }) => {
     await page.goto('./index.html');
     await page.getByRole('link', { name: 'See details' }).click();
@@ -48,7 +46,7 @@ test.describe('test beforeEach', () => {
   });
 })
 
-
+// accessibility tests
 test.describe('accessibility', () => { 
   test('check accessibility issues on index', async ({ page }) => {
     await page.goto('./index.html'); 
