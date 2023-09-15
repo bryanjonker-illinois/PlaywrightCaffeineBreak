@@ -12,13 +12,19 @@
         <script>var SkipToConfig = { 'settings': { 'skipTo': { displayOption: 'popup', colorTheme: 'illinois' } } };</script> 
     </head>
     <body>
-        <div class="il-formatted">
+        <div class="il-formatted" style="max-width: 1200px; margin: auto; padding: 50px;">
             <h1>Some details about Playwright</h1>
             <details>
                 <summary data-testid="test-subject">
-                    Web Server
+                    Local web server
                 </summary>
-                <p data-testid="test-information">This can access your own web server by updating the playwright.config.js.</p>
+                <p data-testid="test-information">This can access your own web server by updating the playwright.config.js. Note that you need to have an NPM command; you can create a stub if you are using LiveServer.</p>
+            </details>
+            <details>
+                <summary>
+                    Existing website
+                </summary>
+                <p>You can point to an existing website and run the tests. Good for final verification and regression tests.</p>
             </details>
             <details>
                 <summary>
@@ -38,6 +44,35 @@
                 </summary>
                 <p>Integrates with aXe toolkit to give you all the accessibility options</p>
             </details>
+            <details>
+                <summary>
+                    Can interact with the page
+                </summary>
+                <p>You can use this to test how your website runs (uses <a href="https://playwright.dev/docs/locators">Playwright Locators</a>). Can choose by the following:
+                    <ul>
+                        <li>Role</li>
+                        <li>Text</li>
+                        <li>Title</li>
+                        <li>Test ID</li>
+                        <li>CSS or XPath selector</li>
+                    </ul>
+                    <p>All of these have their plusses and minuses. If possible, I would focus on the Test ID methodology.</p>
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Has "pre" and "post" steps that can be run on suites
+                </summary>
+                <p>You can use this if your tests require you to log into a page or run steps for setup</p>
+            </details>
+            <details>
+                <summary>
+                    Can be run using NPM or NPX
+                </summary>
+                <p>The NPM option is important because you can trigger this automatically using a Github CI/CD. This can be run on demand (very useful if you are doing this on an existing server) or on code checkin.</p>
+                <p>Note that if you are doing this, you need to install this on a temp server or use another tool like vite.</p>
+            </details>
+            <p><a href="index.html">Back to the main page</a></p>
         </div>
     </body>
 </html>
